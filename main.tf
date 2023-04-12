@@ -46,7 +46,7 @@ resource "aws_mq_broker" "rabbitmq" {
 
   user {
     username = "dimpul"
-    password = "dimpul123"
+    password = "dimpulsunnu123"
   }
 }
 
