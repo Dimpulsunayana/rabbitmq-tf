@@ -27,7 +27,7 @@ resource "aws_security_group" "rabbitmq" {
 resource "aws_mq_broker" "rabbitmq" {
   broker_name = "${var.env}-rabbitmq"
   deployment_mode = var.deployment_mode
-  subnet_ids = var.deployment_mode == "SINGLE_INSTANCE" ? var.subnet_ids[0] : var.subnet_ids
+  subnet_ids = var.deployment_mode == "SINGLE_INSTANCE" ? [var.subnet_ids[0]] : var.subnet_ids
 
 #  configuration {
 #    id       = aws_mq_configuration.test.id
